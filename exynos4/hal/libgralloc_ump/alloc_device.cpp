@@ -60,7 +60,11 @@
 #include <sys/ioctl.h>
 #include "format.h"
 
-#include <linux/videodev2.h>
+#if HAVE_ANDROID_OS
+#include "format.h"
+#endif
+
+#include "videodev2.h"
 #include "s5p_fimc.h"
 
 #ifdef SAMSUNG_EXYNOS4x12
