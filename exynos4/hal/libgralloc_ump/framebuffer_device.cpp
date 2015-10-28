@@ -441,6 +441,8 @@ int framebuffer_device_open(hw_module_t const* module, const char* name, hw_devi
         return status;
     }
 
+    /* initialize our state here */
+    framebuffer_device_t *dev = (framebuffer_device_t *)malloc(sizeof(framebuffer_device_t));
     memset(dev, 0, sizeof(*dev));
 
     /* initialize the procs */
